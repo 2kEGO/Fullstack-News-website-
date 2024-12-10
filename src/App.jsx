@@ -10,12 +10,12 @@ function App() {
         <div className="main-page-container">
 
           <div className="nav-bar-container">
-            <nav>
 
-              <div className="nav-left-section">
+            <nav>
+              <div className="nav-section">
                 
                 <ul>
-                  <li>
+                  <li id='hamburger-container'>
                     <div id='hamburger'>
                       <span></span>
                       <span></span>
@@ -26,9 +26,11 @@ function App() {
                   <li>
                     <a href="">Home</a>
                   </li>
+
                   <li>
                     <a href="">Latest News</a>
                   </li>
+
                   <li>
                     <a href="">Reviews</a>
                   </li>
@@ -36,8 +38,21 @@ function App() {
                 </ul>
 
               </div>
-              <div className="nav-right-section"></div>
+              <div className="nav-section">
+                <ul>
+                  <li>
+                    <a href="">Contact Us</a>
+                  </li>
+
+                  <li id='theme-button-container'>
+                    <button id='theme-button'>
+                      <span></span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </nav>
+
           </div>
 
           <div className="news-content-container"></div>

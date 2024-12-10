@@ -1,15 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 :root{
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    
 }
 
 a {
@@ -20,16 +20,111 @@ a {
 ul {
     padding: 0;
     margin: 0;
+
+    list-style-type: none;
 }
 
 .main-page-background {
     width: 100%;
     height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
 }
 
 .main-page-container {
-    height: 90%;
-    width: 90%;
+    width: 85%;
+    height: 80%;
 
-    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+
+    padding: 40px;
+}
+
+.nav-bar-container {
+    width: 100%;
+    height: 8%;
+}
+
+.nav-bar-container nav {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.nav-left-section {
+    display: flex;
+}
+
+.nav-section ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-section ul li {
+    padding: 10px;
+}
+
+#hamburger-container {
+    height: 25px;
+    width: 25px;
+}
+
+#hamburger {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    
+    justify-content: space-between;
+}
+
+#hamburger span {
+    height: 15%;
+    width: 100%;
+
+    background-color: black;
+    border-radius: 25px;
+}
+
+#hamburger span:nth-child(2) {
+    width: 80%;
+}
+
+#theme-button-container {
+    height: 25px;
+    width: 50px;
+}
+
+#theme-button{
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+
+    border: 1px solid;
+    border-radius: 25px;
+}
+
+#theme-button span {
+    width: 50%;
+    height: 100%;
+
+    border-radius: 50%;
+    border: 1px solid black;
 }
