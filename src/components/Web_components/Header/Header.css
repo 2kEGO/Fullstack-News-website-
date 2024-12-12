@@ -12,11 +12,19 @@ header {
 .top-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
     height: 5vh;
     width: 100%;
+}
+
+.searchbar-section, .account-section {
+    width: 20%;
+}
+
+.region-section {
+    width: 60%;
 }
 
 .searchbar-section {
@@ -30,35 +38,54 @@ header {
     /* gap: 0.5rem; */
 }
 
-.searchbar-section button, .searchbar-section input {
-    margin: 0 1px;
-}
 
-.searchbar-section button {
-    height: 80%;
-    
+.button-container {
+    height: 100%;
+    width: 100%;
+
     display: grid;
     place-content: center;
 }
 
-.searchbar-section input {
-    height: 60%;
-    width: 12rem;
-    padding: 2px;
-}
-
-.searchbar-section button svg {
+.button-container button svg {
     height: 16px;
     width: 16px;
-
     padding: 5px;
 }
 
+.search-toggle {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-toggle input {
+    height: 60%;
+    padding: 2px;
+}
+
+.search-toggle button {
+    height: 70%;
+    
+    padding: 5px;
+    font-size: 13pt;
+
+    text-align: center;
+}
 
 
 .region-section {
     display: flex;
-    height: 30%;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+
 }
 
 .region-section ul {

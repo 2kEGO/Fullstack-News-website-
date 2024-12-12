@@ -3,7 +3,23 @@ import "./Header.css"
 import IconMagnifyingGlass from "../../Icon_Magnifying_Glass/IconMagnifyingGlass"
 
 export default function Header() {
-    
+    let isShow = false;
+
+    function toggleSearch (){
+        
+
+        if (isShow) {
+            document.getElementById('input-search').style.display = 'none';
+            isShow = false;   
+        }
+        else {
+            document.getElementById('input-search').style.display = 'flex';
+            isShow = true;
+            
+        }
+        
+    }
+
     return (
     <>
         <header>
@@ -12,24 +28,27 @@ export default function Header() {
 
                 <div className="searchbar-section">
 
-                    <button>
-                        <IconMagnifyingGlass />
+                    {/* <button onClick={toggleSearch}>
+                        <IconMagnifyingGlass id='icon1'/>
                     </button>
 
-                    <input type="text" placeholder="SEARCH"/>
-                    <button>GO</button> 
+                    <input  type="text" 
+                            placeholder="SEARCH" 
+                            id="input-search"/>
+
+                    <button id="button-search">GO</button>  */}
 
 
-                    {/* <div className="button-container">
-                        <button>
+                    <div className="button-container" >
+                        <button onClick={toggleSearch}>
                             <IconMagnifyingGlass />
                         </button>
                     </div>
 
-                    <div className="search-toggle">
+                    <div className="search-toggle" id="input-search" >
                         <input type="text" placeholder="SEARCH"/>
                         <button>GO</button>
-                    </div> */}
+                    </div>
                     
                 </div>
 
