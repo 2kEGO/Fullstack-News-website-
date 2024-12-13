@@ -1,13 +1,17 @@
 import "./Header.css"
 
 import IconMagnifyingGlass from "../../Icon_Magnifying_Glass/IconMagnifyingGlass"
+import IconAccountOutline from '../../IconAccountOutline/IconAccountOutline.jsx';
+import IconHamburgerMenu from '../../IconHamburgerMenu/IconHamburgerMenu';
+
+let isShow = false;
 
 export default function Header() {
-    let isShow = false;
+    
 
     function toggleSearch (){
         
-
+        
         if (isShow) {
             document.getElementById('input-search1').style.display = 'none';
             document.getElementById('input-search2').style.display = 'none';
@@ -16,17 +20,15 @@ export default function Header() {
         else {
             document.getElementById('input-search1').style.display = 'flex';
             document.getElementById('input-search2').style.display = 'flex';
-            isShow = true;
-            
+            isShow = true;   
         }
-        
     }
 
     return (
     <>
-        <header>
+        <header id="header-top">
 
-            <div className="top-header">
+            <div className="top-header" id="top-header">
 
                 <div className="searchbar-section">
 
@@ -45,7 +47,7 @@ export default function Header() {
 
                 <div className="region-section">
                     <ul>
-                        <li><a href="#">U.S</a></li>
+                        <li><a href="#">U.S.</a></li>
                         <li><a href="#">INTERNATIONAL</a></li>
                         <li><a href="#">CANADA</a></li>
                         <li><a href="#">ESPANOL</a></li>
@@ -55,15 +57,40 @@ export default function Header() {
                 </div>
 
                 <div className="account-section">
-                    <span><a href="">SUBSCRIBE FOR $0.50 (Cdn)/WEEK</a></span>
-                    <span><a href="">LOG IN</a></span>
+                    <a href="" id="account-section-text"><span>SUBSCRIBE FOR $0.50 (CDN)/WEEK</span></a>
+                    <a href="" id="account-section-text2"><span>LOG IN</span></a>
                 </div>
 
                 
                 
             </div>
 
-            <div className="title-header"></div>
+            <div className="title-header">
+                <div className="title-left">
+                    <div className="time-date">
+                        <h3></h3>
+                        <h3></h3>
+                    </div>
+                    <div className="hamburger">
+                        <IconHamburgerMenu/>
+                    </div>
+                </div>
+                <div className="title-middle">
+                    <h1></h1>
+                </div>
+                <div className="title-right">
+                    <div className="trade-info">
+                        <h3></h3>
+                    </div>
+                    <div className="personal-account">
+                        <button>
+                            <IconAccountOutline/>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
 
             <div className="navigation-bar"></div>
         </header>
