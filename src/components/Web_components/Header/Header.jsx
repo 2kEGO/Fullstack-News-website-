@@ -9,11 +9,13 @@ export default function Header() {
         
 
         if (isShow) {
-            document.getElementById('input-search').style.display = 'none';
+            document.getElementById('input-search1').style.display = 'none';
+            document.getElementById('input-search2').style.display = 'none';
             isShow = false;   
         }
         else {
-            document.getElementById('input-search').style.display = 'flex';
+            document.getElementById('input-search1').style.display = 'flex';
+            document.getElementById('input-search2').style.display = 'flex';
             isShow = true;
             
         }
@@ -28,26 +30,15 @@ export default function Header() {
 
                 <div className="searchbar-section">
 
-                    {/* <button onClick={toggleSearch}>
-                        <IconMagnifyingGlass id='icon1'/>
-                    </button>
-
-                    <input  type="text" 
-                            placeholder="SEARCH" 
-                            id="input-search"/>
-
-                    <button id="button-search">GO</button>  */}
-
-
                     <div className="button-container" >
                         <button onClick={toggleSearch}>
                             <IconMagnifyingGlass />
                         </button>
                     </div>
 
-                    <div className="search-toggle" id="input-search" >
-                        <input type="text" placeholder="SEARCH"/>
-                        <button>GO</button>
+                    <div className="search-toggle"  >
+                        <input type="text" placeholder="SEARCH" id="input-search1"/>
+                        <button id="input-search2">GO</button>
                     </div>
                     
                 </div>
@@ -67,6 +58,8 @@ export default function Header() {
                     <span><a href="">SUBSCRIBE FOR $0.50 (Cdn)/WEEK</a></span>
                     <span><a href="">LOG IN</a></span>
                 </div>
+
+                
                 
             </div>
 
