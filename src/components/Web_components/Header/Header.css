@@ -1,10 +1,12 @@
+/* ONLY CONTAIN TOP HEADER ID  */
+
+
 #header-top {
     display: flex;
     flex-direction: column;
 
-    width: 80%;
-    padding: 0 4%;
-    margin: 0 8%;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .top-header {
@@ -49,6 +51,9 @@
 
     display: grid;
     place-items: center;
+
+    background-color: transparent;
+    border: 0;
 }
 
 .button-container button svg {

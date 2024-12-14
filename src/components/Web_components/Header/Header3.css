@@ -1,0 +1,47 @@
+/* ONLY CONTAIN NAVIGATION BAR  */
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.navigation-bar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+
+    border-bottom: 1px solid black;
+}
+
+.navigation-bar ul li {
+    padding: 15px;
+
+    font-size: 10pt;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.live-bar {
+    margin-top: 1px solid black;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 5vh;
+}
+
+.live-bar h5 {
+    margin: 0;
+}
