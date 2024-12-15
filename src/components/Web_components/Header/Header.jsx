@@ -15,7 +15,7 @@ export default function Header() {
     
     const [stock, setStock] = useState(['current'])
     const [currentDate, setCurrentDate] = useState(['today'])
-    const [liveNews, setLiveNews] = useState(['Trumps'])
+    const [liveNews, setLiveNews] = useState(['Trumps', 'news'])
 
     const [region, setRegion] = useState(['U.S.','INTERNATIONAL', 'CANADA', 'ESPANOL', 'CHINA'])
     const [navItems, setNavItems] = useState(['U.S.', 'World', 'Business', 'Art', 'Lifestyle', 'Opinion', 'Audio', 'Games', 'Cooking', 'Wirecutter', 'The Athletic'])
@@ -122,9 +122,16 @@ export default function Header() {
             </div>
 
             <div className="live-bar">
-                <h5>LIVE</h5>
-                <a href="">{liveNews}</a>
-                <a href="">{liveNews}</a>
+                <ul>
+                    <h5>LIVE</h5>
+                    {liveNews.map((item, index ) => (
+                        <li key={index}>
+                            <a href="">{item}</a>
+                        </li>
+                    ))}
+                </ul>
+                
+                
             </div>
         </header>
     </>
