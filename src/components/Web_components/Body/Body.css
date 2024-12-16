@@ -1,4 +1,25 @@
 .body {
     width: 70%;
     margin: 0 auto;
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: row;    
+}
+
+.content-left-container {
+    width: 80%;
+
+    display: flex;
+    
+    padding-right: 30px;
+
+    border-right: 1px solid black;
+}
+
+.content-right-container {
+    width: 20%;
+
+    display: flex;
+    padding-left: 10px;
 }
