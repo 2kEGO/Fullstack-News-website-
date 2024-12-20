@@ -8,18 +8,54 @@
 }
 
 .content-left-container {
-    width: 80%;
+    width: 70%;
 
     display: flex;
     
-    padding-right: 30px;
+    padding-right: 0;
 
-    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
-.content-right-container {
-    width: 20%;
+.content-item-left {
+    width: 40%;
 
     display: flex;
-    padding-left: 10px;
+    flex-direction: column;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+}
+
+.content a h1 {
+    font-size: 10pt;
+}
+
+.content-item-right {
+    width: 60%;
+    padding: 10px;
+}
+
+.content-item-right img {
+    height: 41vh;
+    width: 100%;
+    
+}
+
+
+.content-right-container {
+    width: 30%;
+
+    display: flex;
+
+    margin-left: 10px;
+
+    border-left: 1px solid black;
+}
+
+.content a input {
+    border-radius: 25px;
+    
 }
