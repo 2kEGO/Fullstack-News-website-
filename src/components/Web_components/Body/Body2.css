@@ -1,0 +1,14 @@
+.content-right-container {
+    width: 30%;
+
+    display: flex;
+
+    margin-left: 10px;
+
+    border-left: 1px solid black;
+}
+
+.content a input {
+    border-radius: 25px;
+    
+}

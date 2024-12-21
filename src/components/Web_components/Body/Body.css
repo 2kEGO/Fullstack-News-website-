@@ -1,5 +1,5 @@
 .body {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding-top: 10px;
 
@@ -8,17 +8,19 @@
 }
 
 .content-left-container {
-    width: 70%;
+    width: 75%;
 
     display: flex;
-    
+    flex-direction: row;
+    justify-content: space-between;
+
     padding-right: 0;
 
     border-bottom: 1px solid black;
 }
 
 .content-item-left {
-    width: 40%;
+    width: 35%;
 
     display: flex;
     flex-direction: column;
@@ -30,13 +32,25 @@
 }
 
 .content a h1 {
+    font-size: 15pt;
+}
+
+.content a p {
     font-size: 10pt;
 }
+
+.content a h5 {
+    margin: 2px 0 5px 0;
+}
+
 
 .content-item-right {
     width: 60%;
     padding: 10px;
+
+    text-align: end;
 }
+
 
 .content-item-right img {
     height: 41vh;
@@ -44,18 +58,10 @@
     
 }
 
+.content-item-right h6 {
+    margin: 0;
 
-.content-right-container {
-    width: 30%;
-
-    display: flex;
-
-    margin-left: 10px;
-
-    border-left: 1px solid black;
-}
-
-.content a input {
-    border-radius: 25px;
+    margin: 2px 0 5px 0;
     
 }
+

@@ -1,4 +1,5 @@
 import "./Body.css"
+import "./Body2.css"
 import React, { useEffect, useState, Component } from "react";
 import catImg from "../../../assets/catStanding.webp"
 
