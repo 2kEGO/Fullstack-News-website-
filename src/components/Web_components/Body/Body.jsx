@@ -46,38 +46,67 @@ export default function Body() {
         <>
         <div className="body">
             <div className="content-left-container ">
-                <div className="content-item-left">
 
-                    <div className="content">
-                        <a href={hotNews && hotNews[0]?.url}>
+                <div className="section">
 
-                            <h1>{hotNews && hotNews[0]?.title}</h1>
-                            <p>{hotNews && hotNews[0]?.abstract}</p>
-                            <h5>{hotNews && hotNews[0]?.byline}</h5>
-        
-                        </a>
+                    <div className="content-item-left">
+
+                        <div className="content">
+                            <a href={hotNews && hotNews[0]?.url}>
+
+                                <h1>{hotNews && hotNews[0]?.title}</h1>
+                                <p>{hotNews && hotNews[0]?.abstract}</p>
+                                <h5>{hotNews && hotNews[0]?.byline}</h5>
+
+                            </a>
+                        </div>
+
+                        <hr />
+
+                        <div className="content">
+                            <a href={hotNews && hotNews[1]?.url}>
+
+                                <h1>{hotNews && hotNews[1]?.title}</h1>
+                                <p>{hotNews && hotNews[1]?.abstract}</p>
+                                <h5>{hotNews && hotNews[1]?.byline}</h5>
+
+                            </a>
+                        </div>
+                        
                     </div>
 
-                    <div className="content">
-                        <a href={hotNews && hotNews[1]?.url}>
-
-                            <h1>{hotNews && hotNews[1]?.title}</h1>
-                            <p>{hotNews && hotNews[1]?.abstract}</p>
-                            <h5>{hotNews && hotNews[1]?.byline}</h5>
-        
-                        </a>
-                    </div>
-
-                    
-
-                </div>
-
-                <div className="content-item-right">
+                    <div className="content-item-right">
                     <img src={hotNews && hotNews[0]?.multimedia[0].url} alt="" />
                     <h6>{hotNews && hotNews[0]?.multimedia[0].copyright}</h6>
+                    </div>
+
+                </div>
+                
+                <hr />
+
+                <div className="undersection">
+
+                    <div className="undersection-content">
+                        <a href={hotNews && hotNews[2]?.url}>
+                            <h1>{hotNews && hotNews[2]?.title}</h1>
+                            <p>{hotNews && hotNews[2]?.byline}</p>
+                        </a>                        
+                    </div>
+
+                    <hr />
+
+                    <div className="undersection-content">
+                        <a href={hotNews && hotNews[3]?.url}>
+                            <h1>{hotNews && hotNews[3]?.title}</h1>
+                            <p>{hotNews && hotNews[3]?.byline}</p>
+                        </a>
+                    </div>
+                    
                 </div>
 
             </div>
+
+
             
             <div className="content-right-container"></div>
         </div>
