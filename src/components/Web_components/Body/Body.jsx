@@ -10,9 +10,10 @@ export default function Body() {
 
     const [hotNews, setHotNews] = useState([])
 
+    const [sideNews, setSideNews] = useState([])
 
     
-    const fetchData = async () => {
+    const fetchDataUs = async () => {
         const section = "home";
         
         const apiUrl = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;
@@ -23,11 +24,10 @@ export default function Body() {
                 throw new Error(`HTTP error! status: ${res.status}`);
             }
             const data = await res.json();
-            console.log(data.results)
 
             const pepsi = data.results;
             const worldNews = pepsi.filter(article => article.section === 'us')
-            console.log(worldNews)
+            
 
             setHotNews(worldNews)
             
@@ -37,8 +37,34 @@ export default function Body() {
         }
     };
 
+    const fetchDataSide = async () => {
+        const section = "arts";
+        
+        const apiUrl = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;
+        
+        try {
+            const res = await fetch(apiUrl);
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            const data = await res.json();
+            
+            const pepsi = data.results;
+            const bsNews = pepsi.filter(article => article.section === 'magazine')
+            console.log(bsNews)
+
+            setSideNews(bsNews)
+
+            
+
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    };
+
     useEffect(() => {
-        fetchData();
+        fetchDataUs();
+        fetchDataSide();
     }, []);
 
 
@@ -106,9 +132,31 @@ export default function Body() {
 
             </div>
 
-
             
-            <div className="content-right-container"></div>
+            <div className="content-right-container">
+                <div className="right-section-content">
+
+                    <div className="top-stories">
+                        <div className="media-section">
+                            <a href="">
+                                <img src="" alt="" />
+                                <p></p>
+                            </a>
+                            
+                        </div>
+
+                        <div className="content-section">
+                            <a href="">
+                                <h1></h1>
+                                <p></p>
+                                <p></p>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
         </>
     )
