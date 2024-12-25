@@ -1,7 +1,6 @@
 import "./Body.css"
 import "./Body2.css"
 import React, { useEffect, useState, Component } from "react";
-import catImg from "../../../assets/catStanding.webp"
 
 export default function Body() {
 
@@ -38,9 +37,9 @@ export default function Body() {
     };
 
     const fetchDataSide = async () => {
-        const section = "arts";
+        const section1 = "movies";
         
-        const apiUrl = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;
+        const apiUrl = `https://api.nytimes.com/svc/topstories/v2/${section1}.json?api-key=${apiKey}`;
         
         try {
             const res = await fetch(apiUrl);
@@ -50,7 +49,9 @@ export default function Body() {
             const data = await res.json();
             
             const pepsi = data.results;
-            const bsNews = pepsi.filter(article => article.section === 'magazine')
+            console.log(pepsi)
+
+            const bsNews = pepsi.filter(article => article.section === `${section1}`)
             console.log(bsNews)
 
             setSideNews(bsNews)
@@ -134,13 +135,16 @@ export default function Body() {
 
             
             <div className="content-right-container">
-                <div className="right-section-content">
+                <div className="content-right-wrapper">
 
                     <div className="top-stories">
+
                         <div className="media-section">
-                            <a href="">
-                                <img src="" alt="" />
-                                <p></p>
+                            <a href={sideNews && sideNews[0]?.url}>
+                                <img src={sideNews && sideNews[0]?.multimedia[0].url} alt="" />
+                                <p>{sideNews && sideNews[0].byline}</p>
+                                <h1>{sideNews && sideNews[0].title}</h1>
+                                <p>{sideNews && sideNews[0].abstract}</p>
                             </a>
                             
                         </div>
@@ -153,6 +157,7 @@ export default function Body() {
                             </a>
                             
                         </div>
+
                     </div>
 
                 </div>

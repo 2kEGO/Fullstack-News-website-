@@ -6,3 +6,28 @@
     margin-left: 10px;
     border-left: 1px solid black;
 }
+
+.content-right-wrapper {
+    margin-left: 10px;
+    
+    width: 100%;
+}
+
+.top-stories {
+    display: flex;
+    flex-direction: column;
+
+    width: inherit;
+}
+
+.media-section {
+    width: 100%;
+}
+
+.media-section a {
+    width: 100%;
+}
+
+.media-section a img {
+    width: 100%;
+}
