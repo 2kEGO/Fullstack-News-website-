@@ -133,6 +133,7 @@ export default function Body() {
 
             </div>
 
+            <hr />
             
             <div className="content-right-container">
                 <div className="content-right-wrapper">
@@ -140,11 +141,20 @@ export default function Body() {
                     <div className="top-stories">
 
                         <div className="media-section">
+
                             <a href={sideNews && sideNews[0]?.url}>
-                                <img src={sideNews && sideNews[0]?.multimedia[0].url} alt="" />
-                                <p>{sideNews && sideNews[0].byline}</p>
-                                <h1>{sideNews && sideNews[0].title}</h1>
-                                <p>{sideNews && sideNews[0].abstract}</p>
+                                
+                                <div className="img-title-wrapper">
+                                    <img src={sideNews && sideNews[0]?.multimedia[0].url} alt="" />
+                                    <p>{sideNews && sideNews[0].byline}</p>
+                                </div>
+                                
+                                <div className="content-wrapper">
+                                    <h1>{sideNews && sideNews[0].title}</h1>
+                                    <p>{sideNews && sideNews[0].abstract}</p>
+                                </div>
+                                
+                                
                             </a>
                             
                         </div>

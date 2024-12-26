@@ -2,14 +2,9 @@
     width: 30%;
 
     display: flex;
-
-    margin-left: 10px;
-    border-left: 1px solid black;
 }
 
-.content-right-wrapper {
-    margin-left: 10px;
-    
+.content-right-wrapper {    
     width: 100%;
 }
 
@@ -26,8 +21,14 @@
 
 .media-section a {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    
 }
 
-.media-section a img {
+.img-title-wrapper {
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
